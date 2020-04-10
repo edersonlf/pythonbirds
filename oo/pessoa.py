@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos = 2       #atributo default ou de classe
+
     def __init__(self, *filhos, nome=None, idade=35):
         self.nome = nome
         self.idade = idade
@@ -9,15 +11,6 @@ class Pessoa:
 
 
 if __name__ == '__main__':
-    # p = Pessoa('Maria')
-    # p = Pessoa()
-    # p.idade = 76
-    # p.nome = 'Maria de Lurdes'
-    # print('Diga algo para ele - ', Pessoa.comprimentar(p))
-    # print(id(p))
-    # print(p.comprimentar())
-    # print('A idade de ', p.nome, ' é igual a ', p.idade)
-
     ederson = Pessoa(nome='Éderson')
     print(ederson.nome)
     print(ederson.idade)
@@ -32,6 +25,8 @@ if __name__ == '__main__':
     del luciano.filhos              #exclui um atributo dinamicamente
     print(luciano.__dict__)         #mostrando os atributos de luciano
     print(ederson.__dict__)         #atributos de ederson
+    print('olhos de Pessoa = ', Pessoa.olhos, '  olhos de ederson = ', ederson.olhos,'  olhos de luciano = ', luciano.olhos)
+    print(id(Pessoa.olhos), id(ederson.olhos), id(luciano.olhos))
 
 
 
