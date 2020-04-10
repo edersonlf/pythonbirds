@@ -27,6 +27,13 @@ if __name__ == '__main__':
     for filho in luciano.filhos:
         print(filho.nome)
 
+    #Atributos dinâmicos
+    luciano.sobrenome = 'Ramalho'   #cria um atributo sobrenome dinamicamente
+    del luciano.filhos              #exclui um atributo dinamicamente
+    print(luciano.__dict__)         #mostrando os atributos de luciano
+    print(ederson.__dict__)
+
+
 
 
 
